@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="border-t border-[var(--divider)] bg-surface">
-      <div className="mx-auto flex max-w-[1280px] flex-wrap items-center justify-between gap-5 px-[clamp(20px,5vw,72px)] py-9">
+      <div className="foot mx-auto flex max-w-[1280px] flex-wrap items-center justify-between gap-5 px-[clamp(20px,5vw,72px)] py-9">
         <span className="flex items-center gap-3">
           <Image
             src="/logo.jpg"

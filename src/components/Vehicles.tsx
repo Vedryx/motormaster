@@ -9,10 +9,10 @@ export default function Vehicles() {
     >
       <div className="pointer-events-none absolute -right-[12%] -top-[30%] h-[60vw] max-h-[800px] w-[60vw] max-w-[800px] rounded-full bg-[radial-gradient(circle,rgba(245,166,35,.14),transparent_60%)] blur-[40px]" />
 
-      <div className="relative mx-auto max-w-[1280px] px-[clamp(20px,5vw,72px)] py-[110px]">
+      <div className="sec relative mx-auto max-w-[1280px] px-[clamp(20px,5vw,72px)] py-[110px]">
         <div
           data-reveal
-          className="mb-[52px] grid grid-cols-1 items-end gap-x-[60px] gap-y-6 lg:grid-cols-2"
+          className="two mb-[52px] items-end gap-x-[60px] gap-y-6"
         >
           <div>
             <span className="kicker">Vehicles</span>
@@ -33,14 +33,14 @@ export default function Vehicles() {
           className="m-0 mb-14 flex list-none flex-wrap gap-2.5 p-0"
         >
           {makes.map((m) => (
-            <li key={m} className="make-chip">
+            <li key={m} className="make-chip mk">
               {m}
             </li>
           ))}
         </ul>
 
         {site.showForSale && (
-          <div className="grid grid-cols-1 gap-[18px] md:grid-cols-2 lg:grid-cols-3">
+          <div className="three gap-[18px]">
             {cars.map((c) => (
               <article key={c.name} className="car" data-reveal data-d={c.d}>
                 <div className="relative aspect-[16/10] overflow-hidden">
@@ -55,7 +55,7 @@ export default function Vehicles() {
                     {c.badge}
                   </span>
                 </div>
-                <div className="px-6 pb-[26px] pt-6">
+                <div className="card-body-pad px-6 pb-[26px] pt-6">
                   <h3 className="m-0 font-display text-[28px] font-bold uppercase leading-none">
                     {c.name}
                   </h3>

@@ -8,7 +8,7 @@ import RevealObserver from "@/components/RevealObserver";
 import Services from "@/components/Services";
 import Vehicles from "@/components/Vehicles";
 import WhyUs from "@/components/WhyUs";
-import { contact, site, telHref } from "@/lib/site";
+import { contact, site } from "@/lib/site";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -52,15 +52,6 @@ export default function Home() {
       </main>
 
       <Footer />
-
-      {/* Mobile-only quick call button */}
-      <a
-        href={telHref}
-        className="btn-fill fixed bottom-5 right-5 z-40 px-5 py-3.5 text-[13px] lg:hidden"
-        aria-label={`Call ${site.name}`}
-      >
-        Call us
-      </a>
     </>
   );
 }

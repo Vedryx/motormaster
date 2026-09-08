@@ -5,7 +5,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="grid grid-cols-1 items-center gap-x-[clamp(32px,6vw,96px)] gap-y-14 pb-[120px] lg:grid-cols-2"
+      className="two sec-b items-center gap-x-[clamp(32px,6vw,96px)] gap-y-14 pb-[120px]"
     >
       <div data-reveal className="zoomwrap relative">
         <div className="absolute -bottom-[18px] -right-[18px] left-auto top-auto z-0 h-3/5 w-3/5 border border-[rgba(245,166,35,0.4)]" />
@@ -20,7 +20,7 @@ export default function About() {
           />
           <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(13,16,23,.85),transparent_55%)]" />
           <div className="absolute inset-x-7 bottom-[26px]">
-            <p className="grad m-0 font-display text-[64px] font-extrabold italic leading-none">
+            <p className="grad about-year m-0 font-display text-[64px] font-extrabold italic leading-none">
               2012
             </p>
             <p className="m-0 mt-1.5 text-xs uppercase tracking-[0.2em] text-[rgba(246,241,234,0.7)]">
@@ -47,7 +47,7 @@ export default function About() {
           and work with dealer-level diagnostic equipment — manufacturer
           standards without the dealership bill.
         </p>
-        <ul className="m-0 mt-[34px] grid list-none grid-cols-1 gap-x-6 gap-y-3.5 p-0 sm:grid-cols-2">
+        <ul className="creds m-0 mt-[34px] list-none gap-x-6 gap-y-3.5 p-0">
           {creds.map((c) => (
             <li
               key={c}

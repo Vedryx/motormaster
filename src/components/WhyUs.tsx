@@ -3,7 +3,7 @@ import { reasons } from "@/lib/site";
 
 export default function WhyUs() {
   return (
-    <section id="why" className="pt-[120px]">
+    <section id="why" className="sec pt-[120px]">
       <div data-reveal className="mb-14 max-w-[60ch]">
         <span className="kicker">Why choose us</span>
         <h2 className="h2">
@@ -12,7 +12,7 @@ export default function WhyUs() {
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 border-y border-r border-[var(--divider)] sm:grid-cols-2 lg:grid-cols-4">
+      <div className="four border-y border-r border-[var(--divider)]">
         {reasons.map((r) => (
           <div key={r.title} className="why" data-reveal data-d={r.d}>
             <p className="n m-0 font-display text-[58px] font-extrabold italic leading-none opacity-85 [font-feature-settings:'tnum']">
@@ -30,7 +30,7 @@ export default function WhyUs() {
 
       <figure
         data-reveal
-        className="zoomwrap relative m-0 mt-6 overflow-hidden shadow-[var(--shadow-plate-lg)]"
+        className="zoomwrap quote-fig relative m-0 mt-6 overflow-hidden shadow-[var(--shadow-plate-lg)]"
       >
         <Image
           src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1800&q=80"

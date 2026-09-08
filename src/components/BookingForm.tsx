@@ -42,11 +42,11 @@ export default function BookingForm({
       onSubmit={handleSubmit}
       data-reveal
       data-d="1"
-      className="relative grid grid-cols-1 gap-5 overflow-hidden border border-[var(--divider)] bg-surface px-9 py-10 shadow-[var(--shadow-plate-lg)] sm:grid-cols-2"
+      className="form2 relative gap-5 overflow-hidden border border-[var(--divider)] bg-surface px-9 py-10 shadow-[var(--shadow-plate-lg)]"
     >
       <div className="absolute inset-x-0 top-0 h-[3px] bg-[var(--ember)]" />
 
-      <div className="mb-1.5 sm:col-span-2">
+      <div className="mb-1.5 [grid-column:1/-1]">
         <h3 className="m-0 font-display text-[40px] font-extrabold uppercase italic leading-none">
           Book a <span className="grad">service</span>
         </h3>
@@ -138,7 +138,7 @@ export default function BookingForm({
         </div>
       </div>
 
-      <div className="field sm:col-span-2">
+      <div className="field [grid-column:1/-1]">
         <label htmlFor="bf-notes">Tell us what&apos;s happening</label>
         <textarea
           id="bf-notes"
@@ -148,7 +148,7 @@ export default function BookingForm({
         />
       </div>
 
-      <div className="mt-1.5 flex flex-wrap items-center justify-between gap-4 sm:col-span-2">
+      <div className="mt-1.5 flex flex-wrap items-center justify-between gap-4 [grid-column:1/-1]">
         <span className="text-[13px] text-[rgba(246,241,234,0.55)]">
           Opens{" "}
           <a href={waHref} target="_blank" rel="noopener noreferrer">

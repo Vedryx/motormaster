@@ -22,20 +22,20 @@ export default function Hero() {
       {/* ember bloom */}
       <div className="animate-glow pointer-events-none absolute -bottom-[30%] -left-[10%] -z-10 h-[70vw] max-h-[900px] w-[70vw] max-w-[900px] rounded-full bg-[radial-gradient(circle,rgba(242,106,27,.28),transparent_60%)] blur-[30px]" />
 
-      <div className="absolute bottom-[120px] right-[clamp(20px,5vw,72px)] z-10 hidden origin-bottom-right rotate-90 whitespace-nowrap font-display text-xs font-bold uppercase tracking-[0.4em] text-[rgba(246,241,234,0.4)] lg:block">
+      <div className="hero-side absolute bottom-[120px] right-[clamp(20px,5vw,72px)] z-10 origin-bottom-right rotate-90 whitespace-nowrap font-display text-xs font-bold uppercase tracking-[0.4em] text-[rgba(246,241,234,0.4)]">
         {site.tagline}
       </div>
 
-      <div className="relative mx-auto w-full max-w-[1280px] px-[clamp(20px,5vw,72px)] pb-[72px] pt-[120px] md:pt-[160px]">
+      <div className="hero-copy relative mx-auto w-full max-w-[1280px] px-[clamp(20px,5vw,72px)] pb-[72px] pt-[160px]">
         <div className="anim-rise [animation-delay:0.2s]">
           <span className="kicker">Full-service automotive garage</span>
-          <h1 className="m-0 mt-[26px] font-display text-[clamp(64px,10.5vw,164px)] font-extrabold uppercase italic leading-[0.88] tracking-[-0.015em]">
+          <h1 className="m-0 mt-[26px] font-display text-[clamp(52px,10.5vw,164px)] font-extrabold uppercase italic leading-[0.88] tracking-[-0.015em] [overflow-wrap:anywhere]">
             <span className="block">Master your</span>
             <span className="grad block pr-[0.08em]">machine.</span>
           </h1>
         </div>
 
-        <div className="anim-rise mt-10 grid grid-cols-1 items-end gap-10 [animation-delay:0.45s] lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
+        <div className="two hero-grid anim-rise mt-10 items-end gap-10 [animation-delay:0.45s]">
           <div>
             <p className="m-0 max-w-[52ch] text-[18px] leading-[1.65] text-[rgba(246,241,234,0.82)]">
               {site.description}
@@ -50,7 +50,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <dl className="m-0 grid grid-cols-2 border-l border-[rgba(246,241,234,0.15)] sm:grid-cols-3">
+          <dl className="hero-stats m-0">
             {heroStats.map((s, i) => (
               <div
                 key={s.label}
@@ -74,7 +74,7 @@ export default function Hero() {
       </div>
 
       {/* rev-counter */}
-      <div className="anim-rise absolute right-[clamp(24px,8vw,140px)] top-[clamp(110px,18vh,200px)] hidden aspect-square w-[clamp(120px,14vw,200px)] place-items-center rounded-full border-2 border-[rgba(246,241,234,0.18)] [animation-delay:0.6s] lg:grid">
+      <div className="hero-side anim-rise absolute right-[clamp(24px,8vw,140px)] top-[clamp(110px,18vh,200px)] grid aspect-square w-[clamp(120px,14vw,200px)] place-items-center rounded-full border-2 border-[rgba(246,241,234,0.18)] [animation-delay:0.6s]">
         <div className="animate-glow absolute -inset-0.5 rounded-full bg-[conic-gradient(from_200deg,#ff4d12,#f5a623_230deg,transparent_230deg)] [mask:radial-gradient(farthest-side,transparent_calc(100%-4px),#000_calc(100%-3px))] [-webkit-mask:radial-gradient(farthest-side,transparent_calc(100%-4px),#000_calc(100%-3px))]" />
         <div className="anim-needle absolute bottom-1/2 left-1/2 -ml-[1.5px] h-[40%] w-[3px] origin-bottom rounded-sm bg-gradient-to-t from-[#f26a1b] to-white" />
         <div className="h-3.5 w-3.5 rounded-full bg-[#f5a623] shadow-[0_0_18px_rgba(245,166,35,0.8)]" />

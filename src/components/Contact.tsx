@@ -9,7 +9,7 @@ function Row({
   children: React.ReactNode;
 }) {
   return (
-    <div className="grid grid-cols-[110px_1fr] gap-5 border-b border-[var(--divider)] py-5">
+    <div className="crow gap-5 border-b border-[var(--divider)] py-5">
       <span className="pt-1 font-display text-xs font-bold uppercase tracking-[0.2em] text-accent-2">
         {label}
       </span>
@@ -22,7 +22,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="grid grid-cols-1 gap-x-[clamp(32px,6vw,96px)] gap-y-14 pb-[100px] pt-[120px] lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]"
+      className="two contact-grid sec gap-x-[clamp(32px,6vw,96px)] gap-y-14 pb-[100px] pt-[120px]"
     >
       <div data-reveal>
         <span className="kicker">Contact</span>

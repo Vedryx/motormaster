@@ -16,8 +16,7 @@ export const site = {
  *   NEXT_PUBLIC_WHATSAPP_NUMBER=27821234567
  *   NEXT_PUBLIC_PHONE_DISPLAY="+27 82 123 4567"
  */
-const rawWhatsapp =
-  process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "27000000000";
+const rawWhatsapp = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "27000000000";
 
 export const contact = {
   whatsappNumber: rawWhatsapp.replace(/\D/g, ""),

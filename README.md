@@ -70,3 +70,19 @@ Tokens are declared once in `@theme` (`src/app/globals.css`): graphite ground
 type and Barlow for body copy. Scroll reveals are driven by a single
 `IntersectionObserver` in `RevealObserver`, with a 4s failsafe and a
 `prefers-reduced-motion` opt-out.
+
+### Breakpoints
+
+Layout follows the design's own three breakpoints rather than Tailwind's
+defaults, so the collapse rules live in plain media queries at the bottom of
+`globals.css` and the components carry the matching class hooks (`.two`,
+`.three`, `.four`, `.sec`, `.crow`, `.form2`, …).
+
+| Width | What changes |
+| --- | --- |
+| ≤ 1100px | Rotated tagline and the RPM gauge (`.hero-side`) drop out |
+| ≤ 900px | Desktop nav swaps for the burger + fullscreen menu; two- and three-column grids go single, the four-up goes 2×2; hero stats restack under a top rule; booking form goes single-column; section padding tightens to 88px |
+| ≤ 560px | The four-up goes single; hero headline and stats shrink; buttons go full width; credentials list goes single-column; the "Automotive" sub-label and tighter card padding kick in |
+
+The mobile menu (`Nav.tsx`) locks body scroll while open, closes on Escape, and
+is `inert` when closed so it stays out of the tab order.

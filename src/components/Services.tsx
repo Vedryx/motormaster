@@ -2,11 +2,8 @@ import { services } from "@/lib/site";
 
 export default function Services() {
   return (
-    <section id="services" className="pb-[110px] pt-[120px]">
-      <div
-        data-reveal
-        className="mb-14 grid grid-cols-1 items-end gap-x-[60px] gap-y-6 lg:grid-cols-2"
-      >
+    <section id="services" className="sec pb-[110px] pt-[120px]">
+      <div data-reveal className="two mb-14 items-end gap-x-[60px] gap-y-6">
         <div>
           <span className="kicker">What we do</span>
           <h2 className="h2">
@@ -21,7 +18,7 @@ export default function Services() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div className="three gap-4">
         {services.map((s) => (
           <article key={s.title} className="svc" data-reveal data-d={s.d}>
             <div className="relative flex items-start justify-between">
