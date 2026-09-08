@@ -5,9 +5,6 @@ import { services, waHref } from "@/lib/site";
 
 const slots = ["Morning", "Midday", "Afternoon"];
 
-const selectArrow =
-  "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23f5a623' stroke-width='1.5'/%3E%3C/svg%3E\")";
-
 export default function BookingForm({
   whatsappNumber,
 }: {
@@ -95,12 +92,8 @@ export default function BookingForm({
         <label htmlFor="bf-service">Service needed</label>
         <select
           id="bf-service"
-          className="input appearance-none bg-no-repeat"
+          className="input [color-scheme:dark]"
           name="service"
-          style={{
-            backgroundImage: selectArrow,
-            backgroundPosition: "right 14px center",
-          }}
         >
           {services.map((s) => (
             <option key={s.title}>{s.title}</option>
